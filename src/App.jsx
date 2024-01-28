@@ -7,6 +7,8 @@ import Contact from './Contact';
 import './App.css';
 import Navbar from './Navbar';
 import NotFound from './NotFound';
+import MoreInfo from './MoreInfo';
+
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -21,6 +23,8 @@ const App = () => {
         <Route path="cardComponent" element={<CardComponent />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/MoreInfo/:index" element={<MoreInfo />} />
+
       </Routes>
     </Router>
   );

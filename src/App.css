@@ -62,3 +62,18 @@
   padding-left: 8px;
 }
 
+*{
+  margin-top: 10px !important;
+}
+
+.info-container{
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  color:rgb(0, 0, 0) !important;
+}
+
+.shiba-avatar {
+  display: flex!important;
+  flex-direction: row;
+}

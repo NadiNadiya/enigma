@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './CardStyle.css'
+import MoreInfo from './MoreInfo';
+import { Link } from 'react-router-dom';
 
 const CardComponent = () => {
   const [cardImages, setCardImages] = useState([]);
+  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +21,8 @@ const CardComponent = () => {
     fetchData();
   }, []);
 
+// const moreInfo = (index) => {setSelectedCardIndex(index)};
+
   return (
     <div className="card-container">
       {cardImages.map((image, index) => (
@@ -25,6 +30,10 @@ const CardComponent = () => {
           <img src={image} alt={`Shiba ${index + 1}`} />
           <h2>Title placeholder</h2>
           <p>Description</p>
+          {/* <button onClick={() => moreInfo(index)} >More </button>
+       {selectedCardIndex === index && <MoreInfo/>}
+        */}
+       <Link to={`/MoreInfo/${index}`}>More</Link>
         </div>
       ))}
     </div>

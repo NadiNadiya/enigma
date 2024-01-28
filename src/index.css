@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #e48be0;
+  background-color: #f3dc8b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,7 +15,7 @@
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin: 10, !important;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -49,4 +49,9 @@ input[type="button"] {
     font-size: 24px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.avatar{
+  max-width: 200px !important;
+  max-height: 200px !important;
 }
